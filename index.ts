@@ -22,4 +22,15 @@ const me: [string, number, boolean] = ["Javier", 31, false]; // Type according t
 const phone: any = "iphone"; // Any lets pass any type through;
 const tablet: any = 3;
 
-const laptop: never = 3; // This variable won't be assignable
+// const laptop: never; // This variable won't be assignable
+
+// Functions in TypeScript
+
+const sayWord = (word: string): string => {
+    console.log(word);
+    return word;
+}
+
+// sayWord(); // Without specifying anything, TS detects it has a missing argument
+// sayWord(3); // Parameters can be typed specifiying it in the type;
+// The return value can be typed adding it afther the arguments outside the parentheses.
