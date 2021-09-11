@@ -1,0 +1,25 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavirepi/typescript-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xavirepi/typescript-course/issues"
+  },
+  "homepage": "https://github.com/xavirepi/typescript-course#readme"
+}
