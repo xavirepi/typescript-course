@@ -62,12 +62,30 @@ const tablet: any = 3;
 
 // 7 - Implicit Types in TS
 // Justl like in the previous lesson with default parameters, TS automatically recognizes the value type
-let newName = "Javier";
-newName = "HelloWorld";
-newName = 10;
-console.log("newName", newName);
+// let newName = "Javier";
+// newName = "HelloWorld";
+// newName = 10;
+// console.log("newName", newName);
 
-// Gets type from initial declaration
-let newNameTwo = newName;
-newNameTwo = 10;
-console.log("newNameTwo", newNameTwo)
+// // Gets type from initial declaration
+// let newNameTwo = newName;
+// newNameTwo = 10;
+// console.log("newNameTwo", newNameTwo)
+
+// 8 - Union Types with |
+// In case we want a variable to have one (or more) types we can do it using |
+const makeMargin = (x: string | number): string => {
+    return `margin: ${x}px`;
+}
+
+makeMargin(10);
+makeMargin('10');
+makeMargin(false);
+
+// Null Types
+// By default TS sets null or undefined by default as if we wrote string | null/undefined;
+let dog: string = "Sammy";
+dog = null;
+console.log("dog", dog);
+dog = "Jazz";
+dog = undefined;
