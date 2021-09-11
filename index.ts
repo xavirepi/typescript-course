@@ -53,11 +53,21 @@ const tablet: any = 3;
 // There's no need to type it as TS detects the type automatically.
 
 // Typing rest parameters
-const sayWord = (word?: string, ...otherStuff: [string, number]) => {
-  console.log(otherStuff);
-  return word;
-};
+// const sayWord = (word?: string, ...otherStuff: [string, number]) => {
+//   console.log(otherStuff);
+//   return word;
+// };
 
-sayWord("Javier", "Hello", 3);
+// sayWord("Javier", "Hello", 3);
 
+// 7 - Implicit Types in TS
+// Justl like in the previous lesson with default parameters, TS automatically recognizes the value type
+let newName = "Javier";
+newName = "HelloWorld";
+newName = 10;
+console.log("newName", newName);
 
+// Gets type from initial declaration
+let newNameTwo = newName;
+newNameTwo = 10;
+console.log("newNameTwo", newNameTwo)
