@@ -24,13 +24,40 @@ const tablet: any = 3;
 
 // const laptop: never; // This variable won't be assignable
 
-// Functions in TypeScript
-
-const sayWord = (word: string): string => {
-    console.log(word);
-    return word;
-}
+// 5 - Functions in TypeScript
+// const sayWord = (word: string): string => {
+//     console.log(word);
+//     return word;
+// }
 
 // sayWord(); // Without specifying anything, TS detects it has a missing argument
 // sayWord(3); // Parameters can be typed specifiying it in the type;
 // The return value can be typed adding it afther the arguments outside the parentheses.
+
+// 6 - Optional, default and Rest Params
+
+// ? for optional params
+// const sayWord = (word?: string): string => {
+//   console.log(word);
+//   return word;
+// };
+
+// Adding a default value to parameter
+// sayWord(); // Adding ? before : removes the TS error on missing argument as it's made optional
+// const sayWord = (word = "Hello"): string => {
+//   console.log(word);
+//   return word;
+// };
+
+// sayWord(); // Another way to make it optional is giving the parameter a default value.
+// There's no need to type it as TS detects the type automatically.
+
+// Typing rest parameters
+const sayWord = (word?: string, ...otherStuff: [string, number]) => {
+  console.log(otherStuff);
+  return word;
+};
+
+sayWord("Javier", "Hello", 3);
+
+
